@@ -1,0 +1,6 @@
+name = GSB Resources
+package = Media
+core = 7.x
+description = "Provides different GSB Resources."
+
+dependencies[] = resources
