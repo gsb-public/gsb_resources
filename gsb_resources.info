@@ -1,6 +1,15 @@
 name = GSB Resources
-package = Media
+description = Provides different GSB Resources.
 core = 7.x
-description = "Provides different GSB Resources."
-
+package = Media
+dependencies[] = ctools
 dependencies[] = resources
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = resources_default_resource_twitter_widget_id
+features[variable][] = resources_resource_callout_file_type
+features[variable][] = resources_resource_image_file_type
+features[variable][] = resources_resource_pull_quote_file_type
+features[variable][] = resources_resource_twitter_file_type
+features[variable][] = resources_resource_youtube_file_type

@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ * Code for the GSB Resources feature.
+ */
+
+include_once 'gsb_resources.features.inc';
 
 /**
  * Implement hook_resources_type_info().
