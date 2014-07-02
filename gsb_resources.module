@@ -7,7 +7,7 @@
  */
 function gsb_resources_resources_type_info() {
   $resource_types['resource_callout'] = array(
-    'label' => t('Resource Callout'),
+    'label' => t('Callout'),
     'scheme' => 'callout',
     'use generic streamwrapper' => TRUE,
     'icon' => 'callout.png',
