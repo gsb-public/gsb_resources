@@ -6,6 +6,8 @@
 
 include_once 'gsb_resources.features.inc';
 
+require_once dirname(__FILE__) . '/gsb_resources.formatters.inc';
+
 /**
  * Implement hook_resources_type_info().
  *
