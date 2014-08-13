@@ -18,9 +18,9 @@ function gsb_resources_resources_type_info() {
     'label' => t('Callout'),
     'scheme' => 'callout',
     'use generic streamwrapper' => TRUE,
+    'handler' => 'ResourcesEntityHandler',
     'icon' => 'callout.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
-    'file presave callback' => 'resources_generic_resource_presave',
   );
 
   return $resource_types;
