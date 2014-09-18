@@ -14,7 +14,7 @@ function gsb_resources_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'resources_browser_preview_view_mode';
-  $strongarm->value = 'preview';
+  $strongarm->value = 'resource_browser_preview';
   $export['resources_browser_preview_view_mode'] = $strongarm;
 
   $strongarm = new stdClass();
