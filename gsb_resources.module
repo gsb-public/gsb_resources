@@ -3,25 +3,11 @@
  * @file
  * Code for the GSB Resources feature.
  */
-
+ 
 include_once 'gsb_resources.features.inc';
-
+ 
 require_once dirname(__FILE__) . '/gsb_resources.formatters.inc';
-
-/**
- * Implementation of hook_module_implements_alter()
- *   - hook_resources_type_info should be the last one.
- */
-function gsb_resources_module_implements_alter(&$implementations, $hook) {
-  if ($hook == 'resources_type_info') {
-    if (isset($implementations['gsb_resources'])) {
-      $group = $implementations['gsb_resources'];
-      unset($implementations['gsb_resources']);
-      $implementations['gsb_resources'] = $group;
-    }
-  }
-}
-
+ 
 /**
  * Implement hook_resources_type_info().
  *
@@ -36,14 +22,14 @@ function gsb_resources_resources_type_info() {
     'icon' => 'callout.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
-  $resource_types['resource_twitter'] = array(
-    'label' => t('Twitter'),
-    'scheme' => 'twitter',
-    'unique_uri' => TRUE,
-    'handler' => 'ResourcesTwitterHandler',
-    'settings callback' => 'resources_resource_twitter_settings_form',
-    'icon' => 'twitter.png',
-    'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
-  );
-  return $resource_types;
+}
+ 
+/**
+ * Implement hook_resources_type_info_alter().
+ *
+ * @return array
+ */
+function gsb_resources_resources_type_info_alter(&$resource_types) {
+  $resource_types['resource_twitter']['icon'] = 'twitter.png';
+  $resource_types['resource_twitter']['icon path'] = drupal_get_path('module', 'gsb_resources') . '/assets';
 }
