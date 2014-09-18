@@ -22,6 +22,7 @@ function gsb_resources_resources_type_info() {
     'icon' => 'callout.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
+  return $resource_types;
 }
  
 /**
