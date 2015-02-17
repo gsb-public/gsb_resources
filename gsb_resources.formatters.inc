@@ -40,7 +40,7 @@ function gsb_resources_field_formatter_view($entity_type, $entity, $field, $inst
   if (!empty($entity->field_click_to_expand[LANGUAGE_NONE][0]['value'])) {
     foreach ($elements as &$element) {
       $element['#suffix'] = '<div class="image-enlarge-bar">';
-      $element['#suffix'] .= l(t('Expand Infographic'), file_create_url($entity->uri), array(
+      $element['#suffix'] .= l(t('View Larger'), file_create_url($entity->uri), array(
         'attributes' => array(
           'class' => array('image-enlarge-button'),
           'target' => '_blank'
