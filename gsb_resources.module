@@ -22,6 +22,15 @@ function gsb_resources_resources_type_info() {
     'icon' => 'callout.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
+
+  $resource_types['resource_sidebar'] = array(
+    'label' => t('Sidebar'),
+    'scheme' => 'sidebar',
+    'use generic streamwrapper' => TRUE,
+    'handler' => 'ResourcesEntityHandler',
+    'icon' => 'sidebar.png',
+    'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
+  );
   return $resource_types;
 }
  
