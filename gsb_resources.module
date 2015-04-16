@@ -26,12 +26,10 @@ function gsb_resources_resources_type_info() {
   $resource_types['resource_sidebar'] = array(
     'label' => t('Sidebar'),
     'scheme' => 'sidebar',
-    'handler' => 'ResourcesLocalFileHandler',
-    'upload' => array(
-      'file_directory' => 'resources',
-      'file_extensions' => 'jpg jpeg gif png',
-    ),
-    'preview' => TRUE,
+    'use generic streamwrapper' => TRUE,
+    'handler' => 'ResourcesEntityHandler',
+    'icon' => 'sidebar.png',
+    'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
   return $resource_types;
 }
@@ -44,14 +42,4 @@ function gsb_resources_resources_type_info() {
 function gsb_resources_resources_type_info_alter(&$resource_types) {
   $resource_types['resource_twitter']['icon'] = 'twitter.png';
   $resource_types['resource_twitter']['icon path'] = drupal_get_path('module', 'gsb_resources') . '/assets';
-}
-
-/**
- * Implement hook_form_alter().
- */
-function gsb_resources_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'resources_add_form' && $form['#bundle'] == 'resource_sidebar'){
-    $form['upload']['#title'] = t('Image');
-    $form['upload']['#required'] = FALSE;
-  }
 }
