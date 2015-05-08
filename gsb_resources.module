@@ -3,11 +3,11 @@
  * @file
  * Code for the GSB Resources feature.
  */
- 
+
 include_once 'gsb_resources.features.inc';
- 
+
 require_once dirname(__FILE__) . '/gsb_resources.formatters.inc';
- 
+
 /**
  * Implement hook_resources_type_info().
  *
@@ -22,7 +22,6 @@ function gsb_resources_resources_type_info() {
     'icon' => 'callout.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
-
   $resource_types['resource_sidebar'] = array(
     'label' => t('Sidebar'),
     'scheme' => 'sidebar',
@@ -31,9 +30,17 @@ function gsb_resources_resources_type_info() {
     'icon' => 'sidebar.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
+  $resource_types['resource_soundcloud'] = array(
+    'label' => t('SoundCloud'),
+    'scheme' => 'soundcloud',
+    'use generic streamwrapper' => TRUE,
+    'handler' => 'ResourcesSoundCloudHandler',
+    'icon' => 'soundcloud.png',
+    'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
+  );
   return $resource_types;
 }
- 
+
 /**
  * Implement hook_resources_type_info_alter().
  *
