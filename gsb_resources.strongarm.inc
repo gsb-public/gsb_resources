@@ -95,7 +95,6 @@ function gsb_resources_strongarm() {
   $strongarm->value = array(
     '1_2_width' => '1_2_width',
     'full_width' => 'full_width',
-    'resource_browser_preview' => 'resource_browser_preview',
   );
   $export['resources_resource_soundcloud_view_modes'] = $strongarm;
 
