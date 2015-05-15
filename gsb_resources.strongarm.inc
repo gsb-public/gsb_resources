@@ -94,7 +94,9 @@ function gsb_resources_strongarm() {
   $strongarm->name = 'resources_resource_soundcloud_view_modes';
   $strongarm->value = array(
     '1_2_width' => '1_2_width',
+    '1_3_width' => '1_3_width',
     'full_width' => 'full_width',
+    'large_cover' => 'large_cover',
   );
   $export['resources_resource_soundcloud_view_modes'] = $strongarm;
 
