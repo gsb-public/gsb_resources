@@ -50,3 +50,4 @@ function gsb_resources_resources_type_info_alter(&$resource_types) {
   $resource_types['resource_twitter']['icon'] = 'twitter.png';
   $resource_types['resource_twitter']['icon path'] = drupal_get_path('module', 'gsb_resources') . '/assets';
 }
+

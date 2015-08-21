@@ -34,6 +34,9 @@ function gsb_resources_field_formatter_settings_summary($field, $instance, $view
  * Implements hook_field_formatter_view().
  */
 function gsb_resources_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  if ($items[0]['filemime'] == 'image/gif') {
+    unset($display['settings']['image_style']);
+  }
   $elements = image_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display);
 
   // If field_click_to_expand is enabled, then add a link to open image in a new window.
@@ -52,3 +55,4 @@ function gsb_resources_field_formatter_view($entity_type, $entity, $field, $inst
 
   return $elements;
 }
+
