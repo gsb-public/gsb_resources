@@ -35,7 +35,7 @@ function gsb_resources_field_formatter_settings_summary($field, $instance, $view
  */
 function gsb_resources_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   if ($items[0]['filemime'] == 'image/gif') {
-    unset($display['settings']['image_style']);
+    $display['settings']['image_style'] = '';
   }
   $elements = image_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display);
 
