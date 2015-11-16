@@ -97,6 +97,9 @@ function gsb_resources_strongarm() {
     '1_3_width' => '1_3_width',
     'full_width' => 'full_width',
     'large_cover' => 'large_cover',
+    '1_2_width_mini' => '1_2_width_mini',
+    '1_3_width_mini' => '1_3_width_mini',
+    'full_width_mini' => 'full_width_mini',
   );
   $export['resources_resource_soundcloud_view_modes'] = $strongarm;
 
