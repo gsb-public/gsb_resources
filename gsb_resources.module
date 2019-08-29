@@ -46,6 +46,14 @@ function gsb_resources_resources_type_info() {
     'icon' => 'infogram.png',
     'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
   );
+  $resource_types['resource_art19'] = array(
+    'label' => t('Art19'),
+    'scheme' => 'art19',
+    'use generic streamwrapper' => TRUE,
+    'handler' => 'ResourcesArt19Handler',
+    'icon' => 'art19.png',
+    'icon path' => drupal_get_path('module', 'gsb_resources') . '/assets',
+  );
   return $resource_types;
 }
 
