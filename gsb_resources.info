@@ -25,3 +25,6 @@ features[variable][] = resources_resource_twitter_file_type
 features[variable][] = resources_resource_twitter_view_modes
 features[variable][] = resources_resource_youtube_file_type
 features[variable][] = resources_resource_youtube_view_modes
+features[variable][] = resources_resource_art19_file_type
+features[variable][] = resources_resource_art19_view_modes
+
