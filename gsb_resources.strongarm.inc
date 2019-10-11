@@ -134,6 +134,18 @@ function gsb_resources_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'resources_resource_art19_view_modes';
+  $strongarm->value = array(
+    '1_2_width' => '1_2_width',
+    '1_3_width' => '1_3_width',
+    'full_width' => 'full_width',
+  );
+  $export['resources_resource_art19_view_modes'] = $strongarm;
+
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'resources_resource_youtube_view_modes';
   $strongarm->value = array(
     '1_2_width' => '1_2_width',
